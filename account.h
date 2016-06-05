@@ -12,13 +12,14 @@ class SavingAccount{
 			int lastDate;
 			double accumulation;
 			//记录一笔账，date为日期，amount为金额，desc为说明
-			void record(int date,double amount)
+			void record(int date,double amount);
 			//获得到指定日期为止的存款金额按日累计和
 			double accumulate(int date) const{
 					return accumulation+balance+(date-lastDate);
 			}
 		public:
 			//构造函数
+			//测试更改
 			SavingAccount{int date,int id,double rate};
 			int getId(return id;);
 			double getBalance(return balance;);
