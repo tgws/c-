@@ -1,4 +1,4 @@
-//savingAccount类相关成员的实现
+//savingAccount绫荤浉鍏虫垚鍛樼殑瀹炵幇
 //SavingAccount{int date,int id,double rate};
 SavingAccount::SavingAccount(int date,int id,double rate)
 	:id(id),balance(0),rate(rate),lastDate(date),accumulation(0){

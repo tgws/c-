@@ -1,5 +1,5 @@
-//accountÀàÍ·ÎÄ¼ş£¬Ë½ÓĞ³ÉÔ±£ºÕËºÅID£¬Óà¶îbalance£¬Óà¶îÄêÀûÂÊrate£¬ÉÏ´Î±ä¸üÓà
-//µÄÊ±ÆÚlastdate£¬Óà¶î°´ÈÕÀÛ¼ÓÖ®ºÍaccumulation£»
+//accountç±»å¤´æ–‡ä»¶ï¼Œç§æœ‰æˆå‘˜ï¼šè´¦å·IDï¼Œä½™é¢balanceï¼Œä½™é¢å¹´åˆ©ç‡rateï¼Œä¸Šæ¬¡å˜æ›´ä½™
+//çš„æ—¶æœŸlastdateï¼Œä½™é¢æŒ‰æ—¥ç´¯åŠ ä¹‹å’Œaccumulationï¼›
 #ifndef ACCOUNT_H_
 #define ACCOUNT_H_
 #include<iostream>
@@ -11,24 +11,24 @@ class SavingAccount{
 			double rate;
 			int lastDate;
 			double accumulation;
-			//¼ÇÂ¼Ò»±ÊÕË£¬dateÎªÈÕÆÚ£¬amountÎª½ğ¶î£¬descÎªËµÃ÷
+			//è®°å½•ä¸€ç¬”è´¦ï¼Œdateä¸ºæ—¥æœŸï¼Œamountä¸ºé‡‘é¢ï¼Œdescä¸ºè¯´æ˜
 			void record(int date,double amount);
-			//»ñµÃµ½Ö¸¶¨ÈÕÆÚÎªÖ¹µÄ´æ¿î½ğ¶î°´ÈÕÀÛ¼ÆºÍ
+			//è·å¾—åˆ°æŒ‡å®šæ—¥æœŸä¸ºæ­¢çš„å­˜æ¬¾é‡‘é¢æŒ‰æ—¥ç´¯è®¡å’Œ
 			double accumulate(int date) const{
 					return accumulation+balance+(date-lastDate);
 			}
 		public:
-			//¹¹Ôìº¯Êı
-			//²âÊÔ¸ü¸Ä
+			//æ„é€ å‡½æ•°
+			//æµ‹è¯•æ›´æ”¹
 			SavingAccount{int date,int id,double rate};
 			int getId(return id;);
 			double getBalance(return balance;);
 			double getRate(return rate;);
 			void deposit(int date,double amount);
 			void withdraw(int date,double amount);
-			//½áËãÀûÏ¢£¬Ã¿Äê1ÔÂ1ÈÕµ÷ÓÃÒ»´Î¸Ãº¯Êı
+			//ç»“ç®—åˆ©æ¯ï¼Œæ¯å¹´1æœˆ1æ—¥è°ƒç”¨ä¸€æ¬¡è¯¥å‡½æ•°
 			void settle(int date);
-			//ÏÔÊ¾ÕË»§ĞÅÏ¢
+			//æ˜¾ç¤ºè´¦æˆ·ä¿¡æ¯
 			void show();
 };
 #endif
